@@ -43,19 +43,22 @@ void PrintArray(int[] arr, string beginStr, string separatorElems, string endstr
     }
     Console.Write(endstr);
 }
-try{
-Console.WriteLine("Введите кличество чисел: ");
-int number = Convert.ToInt32(Console.ReadLine());
+try
+{
+    Console.WriteLine("Введите кличество чисел: ");
+    int number = Convert.ToInt32(Console.ReadLine());
 
-//Console.WriteLine(Test(number) ? "" : "Количество чисел не может быть отрицательным");
+    //Console.WriteLine(Test(number) ? "" : "Количество чисел не может быть отрицательным");
 
-int[] array = CreateArrayInt(number);
+    int[] array = CreateArrayInt(number);
 
-PrintArray(array, "", " ", "");
-int result = ArrayIntZero(array);
-Console.WriteLine();
-Console.WriteLine($"Чисел меньше нуля: {result}");
+    PrintArray(array, "", " ", "");
+    int result = ArrayIntZero(array);
+    Console.WriteLine();
+    Console.WriteLine($"Чисел меньше нуля: {result}");
 }
-catch(FormatException){Console.WriteLine($"Это не число");}
-catch(OverflowException){Console.WriteLine($"Число не может быть меньше нуля");
- }
+catch (FormatException) { Console.WriteLine($"Это не число"); }
+catch (OverflowException)
+{
+    Console.WriteLine($"Число не может быть меньше нуля");
+}
